@@ -14,12 +14,13 @@ MIT's website credits inventor Stanley
 
 
 **Bear**
+
 *Meow*
 
 >Karhu loikkasi joen yli
 >>Kissa maukaisi
 
-#####Shopping list
+##### Shopping list
 1. Tomato
 2. Milk
 3. Butter

@@ -1,8 +1,9 @@
-#Hello World
-##This is my site
-###Here are a lot of funny things
+# Hello World
+## This is my site
+### Here are a lot of funny things
 
 Here is a fun fact:
+
 Who invented the granola bar?
 MIT's website credits inventor Stanley
  Mason with creating the first granola bar. 

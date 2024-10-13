@@ -54,13 +54,27 @@ This site was built using [GitHub Pages](https://pages.github.com/)
         const message = document.getElementById('message').value;
 
         fetch(webhookUrl, {
-            method: 'POST',
-            headers: {
-                'Content-Type': 'application/vnd.microsoft.card.adaptive'
-            },
-            body: JSON.stringify({
-                text: "jib"
-            })
+
+         {
+        "type": "message",
+        "attachments": [
+            {
+                "contentType": "application/vnd.microsoft.card.adaptive",
+                "contentUrl": null,
+                "content": {
+                    "$schema": "http://adaptivecards.io/schemas/adaptive-card.json",
+                    "type": "AdaptiveCard",
+                    "version": "1.2",
+                    "body": [
+                        {
+                            "type": "TextBlock",
+                            "text": "JSON.stringify(message)"
+                        }
+                    ]
+                }
+            }
+        ]
+    };
         })
          
         .then(response => {

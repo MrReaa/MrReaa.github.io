@@ -56,10 +56,11 @@ This site was built using [GitHub Pages](https://pages.github.com/)
         fetch(webhookUrl, {
             method: 'POST',
             headers: {
-                'Content-Type': 'application/json'
+                'Content-Type': 'application/vnd.microsoft.card.adaptive'
             },
             body: JSON.stringify({
-                text: "Jotain"})
+                text: "jib"
+            })
         })
          
         .then(response => {

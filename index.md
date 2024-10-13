@@ -46,10 +46,7 @@ This site was built using [GitHub Pages](https://pages.github.com/)
 
 <script>
 
-    const formEl = document.querySelector('.form');
-    const formData = new FormData(formEl);
-    var blaa = Object.fromEntries(formData);
-    console.log(blaa);
+
     
     const webhookUrl = 'https://prod-230.westeurope.logic.azure.com:443/workflows/ef1e6e481c444bacbd6e1b55273703cf/triggers/manual/paths/invoke?api-version=2016-06-01&sp=%2Ftriggers%2Fmanual%2Frun&sv=1.0&sig=pPgEdvhkHxB1zwp1-O8gRMvv42k9m2EJfUfY8i9BPUU';
 

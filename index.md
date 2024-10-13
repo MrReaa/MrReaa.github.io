@@ -60,7 +60,7 @@ This site was built using [GitHub Pages](https://pages.github.com/)
             body: [
                         {
                             type: "TextBlock",
-                            text: JSON.stringify(blaa.message)
+                            text: JSON.stringify(message)
                         }]
         })
          

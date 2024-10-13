@@ -55,7 +55,7 @@ This site was built using [GitHub Pages](https://pages.github.com/)
 
         fetch(webhookUrl, {
 
-         {
+         
         "type": "message",
         "attachments": [
             {
@@ -74,7 +74,7 @@ This site was built using [GitHub Pages](https://pages.github.com/)
                 }
             }
         ]
-    };
+    
         })
          
         .then(response => {

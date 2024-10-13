@@ -63,8 +63,8 @@ This site was built using [GitHub Pages](https://pages.github.com/)
             headers: {
                 'Content-Type': 'application/json'
             },
-            body: 
-                text: JSON.stringify({ blaa.message })
+            body: JSON.stringify({
+                text: "Jotain"})
         })
          
         .then(response => {

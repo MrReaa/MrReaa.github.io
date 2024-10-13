@@ -57,10 +57,13 @@ This site was built using [GitHub Pages](https://pages.github.com/)
             headers: {
                 'Content-Type': 'application/json'
             },
-            body: JSON.stringify({
-                "text": message
-            })
+            body: [
+                        {
+                            type: "TextBlock",
+                            text: JSON.stringify(blaa.message)
+                        }]
         })
+         
         .then(response => {
             if (response.ok) {
                 alert('Message sent!');

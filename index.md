@@ -57,11 +57,9 @@ This site was built using [GitHub Pages](https://pages.github.com/)
             headers: {
                 'Content-Type': 'application/json'
             },
-            body: [
-                        {
-                            type: "TextBlock",
-                            text: JSON.stringify(message)
-                        }]
+            body: JSON.stringify({
+                text: message
+            })
         })
          
         .then(response => {

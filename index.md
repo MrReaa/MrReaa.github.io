@@ -58,7 +58,7 @@ This site was built using [GitHub Pages](https://pages.github.com/)
                 'Content-Type': 'application/json'
             },
             body: JSON.stringify({
-                text: message
+                "text": message
             })
         })
         .then(response => {

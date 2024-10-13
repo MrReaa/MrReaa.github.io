@@ -37,6 +37,7 @@ This site was built using [GitHub Pages](https://pages.github.com/)
 ---
 
 ### Lähetä viesti Teams :D
+<script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
 
 <form id="teamsForm">
     <label for="message">Message:</label>
@@ -45,17 +46,14 @@ This site was built using [GitHub Pages](https://pages.github.com/)
 </form>
 
 <script>
-
     const webhookUrl = 'https://prod-230.westeurope.logic.azure.com:443/workflows/ef1e6e481c444bacbd6e1b55273703cf/triggers/manual/paths/invoke?api-version=2016-06-01&sp=%2Ftriggers%2Fmanual%2Frun&sv=1.0&sig=pPgEdvhkHxB1zwp1-O8gRMvv42k9m2EJfUfY8i9BPUU';
-
     document.getElementById('teamsForm').addEventListener('submit', function(e) {
         e.preventDefault();
-
-        const message = document.getElementById('message').value;
-
-        fetch(webhookUrl, {
-
-         
+        const message = document.getElementById('message');
+        const formData = new FormData(message);
+        var blaa = Object.fromEntries(formData);
+        console.log(blaa);
+        var formatted_Card = {
         "type": "message",
         "attachments": [
             {
@@ -68,25 +66,20 @@ This site was built using [GitHub Pages](https://pages.github.com/)
                     "body": [
                         {
                             "type": "TextBlock",
-                            "text": "JSON.stringify(message)"
+                            "text": JSON.stringify(blaa.message)
                         }
                     ]
                 }
             }
         ]
-    
-        })
-         
-        .then(response => {
-            if (response.ok) {
-                alert('Message sent!');
-            } else {
-                alert('Error sending message');
-            }
-        })
-        .catch(error => {
-            console.error('Error:', error);
-            alert('Error sending message');
-        });
+    }  
+
+    axios.post(webhookUrl, formatted_Card)
+    .then((response) => {
+        console.log(response);
+    })
+    .catch((error) => {
+        console.error('Error sending message:', error);
     });
+});
 </script>
